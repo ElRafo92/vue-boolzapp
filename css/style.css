@@ -24,39 +24,192 @@ body {
     flex-direction: column;
 }
 
+/*==================
+====================
+    LEFTCOLUMN
+====================
+==================*/
 .leftcolumn {
     width: 30%;
     background-color: blueviolet;
-
+    border-right: 2px solid lightgrey;
 }
 
+/*==================
+    LEFTHEAD
+==================*/
 .lefthead {
     background-color: var(--bg-comune);
     width: 100%;
     height: 7%;
+    padding: 10PX;
+    display: flex;
+    justify-content: space-between;
+    vertical-align: middle;
 }
 
+/*======== PROFILE ==========*/
+.profile {
+    width: 50%;
+    display: flex;
+    align-items: center;
+}
+
+.profile img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.profile .name {
+    margin: 0 10px;
+}
+
+/*======== HEAD ICONS ==========*/
+.head__icons {
+    width: 50%;
+    text-align: end;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+.head__icons ul {
+    display: flex;
+}
+
+.head__icons li {
+list-style: none;
+font-size: 22px;
+color: var(--icone);
+cursor: pointer;
+}
+
+.head__icons li:nth-child(2) {
+    margin: 0 15px;
+}
+
+/*==================
+    NOTIFICA
+==================*/
 .notifica {
     background-color: var(--notifica);
     width: 100%;
     height: 7%;
+    padding: 10PX;
+    display: flex;
+    align-items: center;
 }
 
+/*======== ICONA ==========*/
+.icona {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: white;
+}
+
+.icona i {
+    color: var(--notifica);
+}
+
+/*======== MESSAGGIO ==========*/
+.messaggio__container {
+    margin-left: 10px;
+}
+
+.messaggio__container .messaggio {
+    display: block;
+    font-weight: bold;
+}
+
+.messaggio__container .action {
+    color: grey;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+/*==================
+    SEARCH
+==================*/
 .search {
     background-color: var(--bg-comune);
     width: 100%;
     height: 5%;
+    padding: 10px;
     display: flex;
 }
 
+/*======== SEARCH BUTTON ==========*/
+.search__button {
+ width: 10%;
+ text-decoration: none;
+ background-color: white;
+ border-style: none;
+ cursor: pointer;
+}
+
+/*======== SEARCH BAR ==========*/
+.search__form {
+    width: 90%;
+}
+
+#search__bar {
+    width: 100%;
+    height: 100%;
+    border-style: none;
+}
+
+/*==================
+    USERLIST
+==================*/
 .userlist {
-    background-color: white;
+    background-color: rgb(255, 255, 255);
     width: 100%;
     flex: 1;
     overflow-y: auto;
     padding: 30px 20px;
+    display: flex;
+    flex-direction: column;
 }
 
+/*======== USER ==========*/
+.userlist .user {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid lightgrey;
+   cursor: pointer;
+}
+
+.avatar img {
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    margin-right: 10px;
+}
+
+.user .name {
+    font-weight: bold;
+}
+
+.user .date__message {
+    color: lightgrey;
+}
+
+.user .time {
+    color: lightgrey;
+    flex: 1;
+    display: flex;
+    justify-content: end;
+}
+
+/*==================
+====================
+    RIGHTCOLUMN
+====================
+==================*/
 .rightcolumn {
     flex: 1;
     overflow-y: auto;
@@ -64,12 +217,18 @@ body {
 
 }
 
+/*==================
+    RIGHT HEAD
+==================*/
 .righthead {
     background-color: var(--bg-comune);
     width: 100%;
     height: 7%;
 }
 
+/*==================
+    MESSAGES
+==================*/
 .messages {
     display: flex;
     flex: 1;
@@ -78,6 +237,9 @@ body {
     color: aqua;
 }
 
+/*==================
+    RIGHT FOOT
+==================*/
 .rightfoot {
     background-color: var(--bg-comune);
     width: 100%;

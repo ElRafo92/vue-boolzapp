@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
         <!-- style css -->
-        <link rel="stylesheet" href="css/style2.css">
+        <link rel="stylesheet" href="css/style.css">
         <!-- style css -->
         <!-- vue js -->
         <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
@@ -26,10 +26,52 @@
 <body>
     <div class="container" id="app">
             <div class="leftcolumn">
-                <div class="lefthead"></div>
-                <div class="notifica"></div>
-                <div class="search"></div>
-                <div class="userlist"></div>
+                <div class="lefthead">
+                    <div class="profile">
+                        <img src="img/avatar_io.jpg" alt="">
+                        <div class="name">gina</div>
+                    </div>
+                    <div class="head__icons">
+                        <ul>
+                            <li><i class="fa-solid fa-circle-notch"></i></li>
+                            <li><i class="fa-solid fa-message"></i></li>
+                            <li><i class="fa-solid fa-ellipsis-vertical"></i></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="notifica">
+                    <div class="icona">
+                        <i class="fa-sharp fa-solid fa-bell-slash"></i>
+                    </div>
+                    <div class="messaggio__container">
+                        <span class="messaggio">
+                            Ricevi notifiche di nuovi messaggi
+                        </span>
+                        <span class="action">Attiva notifiche desktop</span>
+                    </div>
+                </div>
+                <div class="search">
+                    <button type="submit" class="search__button">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </button>
+                    <form action="" class="search__form">
+                        <input type="text" name="" id="search__bar">
+                    </form>
+                </div>
+                <div class="userlist">
+                    <ul>
+                        <li class="user">
+                            <div class="avatar">
+                                <img src="img/avatar_1.jpg" alt="">
+                            </div>
+                            <div class="data">
+                                <div class="name">gigio </div>
+                                <div class="date__message">gigione</div>
+                            </div>
+                            <div class="time">12:00</div>
+                        </li>
+                    </ul>
+                </div>
             </div>
             <div class="rightcolumn">
                 <div class="righthead"></div>
