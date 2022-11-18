@@ -1,21 +1,88 @@
-/*==================
-====================
-        RESET
-====================
-==================*/
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
-/*==================
-====================
-        DEBUG
-====================
-==================*/
-.debug__border{
-    border: 2px solid black;
+body {
+    height: 100vh;
+    background: linear-gradient(to bottom, var(--primo__gradiente) 20%, var(--secondo__gradiente) 20%);
+    padding:20px 40px ;
+
+}
+
+.container {
+    max-width: 1500px;
+    height: 100%;
+    margin: auto;
+    background-color: white;
+    display: flex;
+}
+
+.leftcolumn, .rightcolumn {
+    display: flex;
+    flex-direction: column;
+}
+
+.leftcolumn {
+    width: 30%;
+    background-color: blueviolet;
+
+}
+
+.lefthead {
+    background-color: var(--bg-comune);
+    width: 100%;
+    height: 7%;
+}
+
+.notifica {
+    background-color: var(--notifica);
+    width: 100%;
+    height: 7%;
+}
+
+.search {
+    background-color: var(--bg-comune);
+    width: 100%;
+    height: 5%;
+    display: flex;
+}
+
+.userlist {
+    background-color: white;
+    width: 100%;
+    flex: 1;
+    overflow-y: auto;
+    padding: 30px 20px;
+}
+
+.rightcolumn {
+    flex: 1;
+    overflow-y: auto;
+    background-color: black;
+
+}
+
+.righthead {
+    background-color: var(--bg-comune);
+    width: 100%;
+    height: 7%;
+}
+
+.messages {
+    display: flex;
+    flex: 1;
+    padding: 10px 20px;
+    overflow-y: auto;
+    color: aqua;
+}
+
+.rightfoot {
+    background-color: var(--bg-comune);
+    width: 100%;
+    height: 7%;
+    
 }
 
 /*==================
@@ -28,7 +95,9 @@
     --secondo__gradiente:#dadbd4;
     --notifica:#8edafc;
     --icone:#b1b1b1;
+    --bg-comune: #eaeaea;
 }
+
 /*==================
 ====================
         FONT
@@ -40,110 +109,19 @@ body {
 
 /*==================
 ====================
-    UTILITIES
+        DEBUG
 ====================
 ==================*/
-.d-flex {
-    display: flex;
+.debug__border{
+    border: 1px solid black;
 }
 
 /*==================
 ====================
-    STYLE
+        DEBUG
 ====================
 ==================*/
-.btn {
-
-}
-
-.serch__bar {
-
-}
-
-.icons {
-
-}
-/*==================
-====================
-    MAIN
-====================
-==================*/
-main {
-background: linear-gradient(0deg, rgba(220,219,210,1) 80%, rgba(0,150,136,1) 30%);
-height: 100vh;
-width: 100vw;
-padding: 25px 80px;
-
-justify-content: center;
-align-items: center;
-}
-/*==================
-    CONTAINER
-==================*/
-.container {
-    width: 80vw;
-    height: 90vh;
-}
-
 /*==================
     USER BAR
 ==================*/
-.user__bar-container {
-    width: 40%;
-    height: 100%;
-}
-
-/*======== BAR HEADER ==========*/
-.bar-header {
-    width: 100%;
-    height: 7%;
-    padding: 5px;
-}
-
 /*======== NOTIFICATION ==========*/
-.bar-notification {
-    width: 100%;
-    height: 10%;
-    padding: 5px;
-}
-
-/*======== SEARCHBAR ==========*/
-.searchbar-bar {
-    width: 100%;
-    height: 7%;
-    padding: 5px;
-}
-
-/*======== USERS LIST ==========*/
-.user__list-container {
-    width: 100%;
-    height: 76%;
-    padding: 5px;
-}
-
-/*==================
-    MAIN BODY
-==================*/
-.main__body-container {
-    width: 60%;
-}
-/*======== MAIN BODY HEAD==========*/
-.main__body-header {
-    width: 100%;
-    height: 10vh;
-    padding: 5px;
-}
-
-/*======== MAIN BODY CENTER==========*/
-.main__body-center {
-    width: 100%;
-    height: calc(100% - 20vh);
-    padding: 5px;
-
-}
-/*======== MAIN BODY FOOT==========*/
-.main__body-footer {
-    width: 100%;
-    height: 10vh;
-    padding: 5px;
-}
