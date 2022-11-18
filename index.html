@@ -60,13 +60,13 @@
                 </div>
                 <div class="userlist">
                     <ul>
-                        <li class="user">
+                        <li class="user" v-for="(contact, index) in contacts">
                             <div class="avatar">
-                                <img src="img/avatar_1.jpg" alt="">
+                                <img :src="`img/avatar${contact.avatar}.jpg`" alt="">
                             </div>
                             <div class="data">
-                                <div class="name">gigio </div>
-                                <div class="date__message">gigione</div>
+                                <div class="name">{{contact.name}} </div>
+                                <div class="date__message">Ultimo messaggio inviato</div>
                             </div>
                             <div class="time">12:00</div>
                         </li>
@@ -113,5 +113,6 @@
                 </div>
             </div>
     </div>
+    <script src="js/main.js"></script>
 </body>
 </html>
