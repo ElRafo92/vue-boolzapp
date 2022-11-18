@@ -203,6 +203,7 @@ cursor: pointer;
     flex: 1;
     display: flex;
     justify-content: end;
+    vertical-align: top;
 }
 
 /*==================
@@ -213,8 +214,6 @@ cursor: pointer;
 .rightcolumn {
     flex: 1;
     overflow-y: auto;
-    background-color: black;
-
 }
 
 /*==================
@@ -224,6 +223,53 @@ cursor: pointer;
     background-color: var(--bg-comune);
     width: 100%;
     height: 7%;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/*======== PROFILO INTERLOCUTORE  ==========*/
+.current__chat {
+    width: 50%;
+    display: flex;
+    align-items: center;
+}
+
+.avatar__img img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 10px;
+}
+
+.avatar__data {
+    width: 100%;
+}
+
+.avatar__data .name {
+    font-weight: bold;
+}
+
+/*======== RIGHT HEAD ICONS ==========*/
+.righthead__icons {
+    padding-right: 10px;
+}
+
+.righthead__icons ul {
+    display: flex;
+}
+
+.righthead__icons li {
+    list-style: none;
+    font-size: 22px;
+    color: var(--icone);
+    cursor: pointer;
+}
+
+.righthead__icons li:nth-child(2) {
+    margin: 0 15px;
 }
 
 /*==================
@@ -231,10 +277,30 @@ cursor: pointer;
 ==================*/
 .messages {
     display: flex;
+    flex-direction: column;
     flex: 1;
     padding: 10px 20px;
     overflow-y: auto;
-    color: aqua;
+    background-image: url(../img/mine.jpg);
+}
+/*======== MESSAGE ==========*/
+.message {
+    padding: 15px;
+    margin: 10px;
+    border-radius: 10px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.sent {
+    width: 45%;
+    background-color: var(--sent);
+    text-align: end;
+}
+
+.received {
+    background-color: white;
+    width: 45%;
 }
 
 /*==================
@@ -244,8 +310,51 @@ cursor: pointer;
     background-color: var(--bg-comune);
     width: 100%;
     height: 7%;
-    
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
 }
+
+/*======== EMOJI ==========*/
+.emoji {
+    width: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.emoji i {
+    font-size: 22px;
+    color: var(--icone);
+    cursor: pointer;
+}
+/*======== CHAT BAR ==========*/
+.chat__bar {
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+
+.chat__bar form, .chat__bar input  {
+    width: 100%;
+    height: 100%;
+    border-style: none;
+}
+
+/*======== MICROFONO ==========*/
+.microfono {
+    width: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.microfono i {
+    font-size: 22px;
+    color: var(--icone);
+    cursor: pointer;
+}
+
 
 /*==================
 ====================
@@ -258,6 +367,7 @@ cursor: pointer;
     --notifica:#8edafc;
     --icone:#b1b1b1;
     --bg-comune: #eaeaea;
+    --sent: #d5f9ba;
 }
 
 /*==================
