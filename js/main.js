@@ -4,7 +4,7 @@ createApp({
   data() {
     return {
         indexUser: 0,
-        activeUser: [],
+        newMsg: '',
         contacts: [
             {
                 name: 'Michele',
@@ -173,6 +173,23 @@ createApp({
   methods: {
     selectUser(i) {
         this.indexUser = i;
+    },
+    addMsg() {
+        const objMeassages = {
+            date: '10/01/2020 15:50:00',
+            message: this.newMsg,
+            status: 'sent'
+        }
+        this.contacts[this.indexUser].messages.push(objMeassages);
+        
+        setTimeout(() => {
+            const answerMeassages = {
+                date: '10/01/2020 15:50:00',
+                message: 'ok',
+                status: 'received'
+            }
+            this.contacts[this.indexUser].messages.push(answerMeassages);
+        }, 1000);
     },
 }
 }).mount('#app')

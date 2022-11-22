@@ -102,8 +102,8 @@
                         <i class="fa-regular fa-face-smile"></i>
                     </div>
                     <div class="chat__bar">
-                        <form action="">
-                            <input type="tel" name="" id="">
+                        <form action="" @submit.prevent="addMsg(indexUser)">
+                            <input type="text" name="" id="" v-model="newMsg">
                         </form>
                     </div>
                     <div class="microfono">
