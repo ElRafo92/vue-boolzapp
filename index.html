@@ -51,16 +51,16 @@
                     </div>
                 </div>
                 <div class="search">
-                    <button type="submit" class="search__button">
+                    <button type="submit" class="search__button" @click="search()">
                         <i class="fa-solid fa-magnifying-glass"></i>
                     </button>
-                    <form action="" class="search__form">
-                        <input type="text" name="" id="search__bar">
+                    <form action="" class="search__form" @submit.prevent="search">
+                        <input type="text" name="" id="search__bar" v-model="searchUser">
                     </form>
                 </div>
                 <div class="userlist">
                     <ul>
-                        <li class="user" v-for="(contact, index) in contacts" @click="selectUser(index)">
+                        <li id="user" class="user d-flex" v-for="(contact, index) in contacts" @click="selectUser(index)">
                             <div class="avatar">
                                 <img :src="`img/avatar${contact.avatar}.jpg`" alt="">
                             </div>

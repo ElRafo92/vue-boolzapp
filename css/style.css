@@ -19,6 +19,14 @@ body {
     display: flex;
 }
 
+.none {
+    display: none;
+}
+
+.d-flex {
+    display: flex;
+}
+
 .leftcolumn, .rightcolumn {
     display: flex;
     flex-direction: column;
@@ -178,7 +186,6 @@ cursor: pointer;
 
 /*======== USER ==========*/
 .userlist .user {
-    display: flex;
     align-items: center;
     border-bottom: 1px solid rgba(211, 211, 211, 0.397);
     cursor: pointer;

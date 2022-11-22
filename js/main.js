@@ -5,6 +5,7 @@ createApp({
     return {
         indexUser: 0,
         newMsg: '',
+        searchUser: '',
         contacts: [
             {
                 name: 'Michele',
@@ -174,6 +175,7 @@ createApp({
     selectUser(i) {
         this.indexUser = i;
     },
+
     addMsg() {
         const objMeassages = {
             date: '10/01/2020 15:50:00',
@@ -191,5 +193,30 @@ createApp({
             this.contacts[this.indexUser].messages.push(answerMeassages);
         }, 1000);
     },
-}
+
+    search() {
+        for (let i = 0; i < this.searchUser.length; i++) {
+            //console.log(typeof this.searchUser)
+            //console.log(typeof this.contacts[i].name)
+
+            if (this.searchUser === this.contacts[i].name) {
+                //console.log('ciao')
+                this.contacts[i].visible = false
+               // console.log(this.contacts[i].visible)
+            };
+
+            if (this.contacts[i].visible === false) {
+                this.contacts.forEach((element, i) => {
+                    //console.log(element)
+                    if (element.visible === true) {
+                        const x = document.querySelectorAll('.user')
+                        x[i].classList.remove('d-flex')
+                        x[i].classList.add('none')
+                    }
+                });
+            }
+        }
+    },
+},
+
 }).mount('#app')
